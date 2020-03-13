@@ -13,9 +13,17 @@
 </head>
 <body>
     <h1>cookies testen</h1>
-    <div class="background light">
-        <p>Lorem ipsum dolor sit amet.</p>
-    </div>
+    <?php
+        if(!isset($_COOKIE["accessibility"])){
+            echo '<div class="background light">';
+        } else {
+            echo '<div class="background '.$_COOKIE["accessibility"].'">';
+        }
+        
+        echo '<p>Lorem ipsum dolor sit amet.</p>';
+        echo '</div>';
+    ?>
+    
     <button id="toggle">Toggle background</button>
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>

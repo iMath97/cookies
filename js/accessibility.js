@@ -5,13 +5,6 @@ $(document).ready(function () {
     let cookies = getCookie("accessibility");
     console.log(cookies);
 
-    if(cookies == "dark"){
-        switchbg("dark");
-    } else if(cookies == "light") {
-        switchbg("light");
-    }
-
-
     $("#toggle").on("click", function () {
         if(lightcomponents.length > 0){
             switchbg("dark");
